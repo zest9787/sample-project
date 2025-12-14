@@ -1,0 +1,33 @@
+.stack {
+    display: grid;
+    gap: 12px;
+}
+
+.resultHeader {
+    display: grid;
+    gap: 6px;
+}
+
+.hint {
+    color: #666;
+    font-size: 12px;
+}
+
+.error {
+    color: #b00020;
+    font-size: 12px;
+}
+
+.list {
+    display: grid;
+    gap: 8px;
+    padding-top: 2px;
+}
+
+.empty {
+    padding: 14px 10px;
+    border: 1px dashed #ddd;
+    border-radius: 12px;
+    color: #666;
+    font-size: 13px;
+}

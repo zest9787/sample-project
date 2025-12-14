@@ -1,0 +1,55 @@
+import { Meta, Canvas, Controls, Description, Source } from "@storybook/addon-docs/blocks";
+import * as Stories from "./EmployeeSearchModal.stories";
+
+/**
+ * 이 MDX는 “문서(설명) + 기존 CSF 스토리(동작)”를 결합합니다.
+ * - 동작/시나리오: EmployeeSearchModal.stories.tsx
+ * - 설명/가이드: 이 파일(EmployeeSearchModal.docs.stories.mdx)
+ */
+
+<Meta of={Stories} />
+
+# 사원 검색 모달 (EmployeeSearchModal)
+
+<Description>
+사원을 **검색 → 선택**하는 공통 모달입니다.
+FSD 기준으로 **사원 도메인 표현(entities)** 과 **검색/선택 유스케이스(features)** 를 분리하고,
+모달/버튼/인풋 등 범용 UI는 **shared/ui** 를 사용합니다.
+</Description>
+
+---
+
+## FSD 구조에서의 위치
+
+- `entities/employee`: 사원 타입, 리스트 아이템 등 “도메인 표현”
+- `features/employee/search-employee`: “사원 검색 후 선택” 유스케이스 (이 모달)
+- `shared/ui`: Modal / Button / Input 같은 범용 UI
+
+> ✅ 이 컴포넌트는 “여러 화면에서 재사용”하기 위한 feature입니다.
+
+---
+
+## 기본 사용법
+
+```tsx
+import { useState } from "react";
+import { EmployeeSearchModal } from "@/features/employee/search-employee";
+
+export function SomePage() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>사원 검색</button>
+
+      <EmployeeSearchModal
+        open={open}
+        onClose={() => setOpen(false)}
+        onSelect={(emp) => {
+          console.log("선택된 사원:", emp);
+        }}
+        // searchEmployees는 아래 “검색 함수 주입” 참고
+      />
+    </>
+  );
+}

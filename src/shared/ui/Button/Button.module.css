@@ -1,0 +1,24 @@
+.btn {
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.primary {
+    background: #111;
+    color: white;
+}
+
+.ghost {
+    background: transparent;
+    border-color: #ddd;
+    color: #111;
+}
+
+.btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}

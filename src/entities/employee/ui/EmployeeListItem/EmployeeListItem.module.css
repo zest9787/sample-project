@@ -1,0 +1,36 @@
+.item {
+    width: 100%;
+    text-align: left;
+    border: 1px solid #eee;
+    background: white;
+    padding: 10px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.item:hover {
+    border-color: #ddd;
+}
+
+.selected {
+    border-color: #111;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.meta {
+    margin-top: 2px;
+    color: #666;
+    font-size: 12px;
+}
+
+.email {
+    color: #444;
+    font-size: 12px;
+}
