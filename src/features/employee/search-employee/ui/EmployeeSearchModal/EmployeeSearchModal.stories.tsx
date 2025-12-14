@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { EmployeeSearchModal } from "./EmployeeSearchModal";
 import type { Employee } from "@/entities/employee";
 import type { SearchEmployeesFn } from "../../model/types";
@@ -25,6 +25,7 @@ type Story = StoryObj<typeof EmployeeSearchModal>;
 const MOCK: Employee[] = [
   {
     id: "1",
+    empNo: "1",
     name: "김철수",
     department: "개발1팀",
     position: "FE",
@@ -32,6 +33,7 @@ const MOCK: Employee[] = [
   },
   {
     id: "2",
+    empNo: "2",
     name: "이영희",
     department: "개발2팀",
     position: "BE",
@@ -39,6 +41,7 @@ const MOCK: Employee[] = [
   },
   {
     id: "3",
+    empNo: "3",
     name: "박민수",
     department: "인사팀",
     position: "HR",
@@ -46,6 +49,7 @@ const MOCK: Employee[] = [
   },
   {
     id: "4",
+    empNo: "4",
     name: "최지우",
     department: "재무팀",
     position: "Finance",
