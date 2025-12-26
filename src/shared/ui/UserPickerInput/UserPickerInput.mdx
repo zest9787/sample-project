@@ -1,0 +1,49 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as UserPickerInputStories from './UserPickerInput.stories';
+
+<Meta of={UserPickerInputStories} />
+
+# UserPickerInput
+
+`UserPickerInput` 컴포넌트는 사용자를 검색하고 선택할 수 있는 입력 필드입니다.
+
+## 주요 기능
+
+- 사번, 이름으로 구성된 입력 필드
+- 검색 버튼 클릭 시 사용자 검색 모달 표시
+- 모달 내에서 키워드로 사용자 검색
+- 검색 결과에서 사용자 선택 및 적용
+
+## 기본 사용법
+
+<Canvas of={UserPickerInputStories.Default} />
+
+## Props
+
+<Controls />
+
+## 추가 예시
+
+### 비활성화 상태 (Disabled)
+
+`disabled` prop을 `true`로 설정하여 입력을 비활성화할 수 있습니다.
+
+<Canvas of={UserPickerInputStories.Disabled} />
+
+### 사번 입력 필드 숨기기
+
+`showEmpNo` prop을 `false`로 설정하여 사번 입력 필드를 숨길 수 있습니다.
+
+<Canvas of={UserPickerInputStories.WithoutEmpNo} />
+
+### 미리 채워진 값 (Prefilled)
+
+초기값이 설정된 상태입니다.
+
+<Canvas of={UserPickerInputStories.Prefilled} />
+
+### 검색 에러 처리
+
+검색 중 에러가 발생했을 때의 동작입니다.
+
+<Canvas of={UserPickerInputStories.SearchError} />
